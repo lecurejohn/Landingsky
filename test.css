@@ -1,0 +1,305 @@
+/* Donner une couleur au fond du contenu dans body */
+body{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	/*background-color: #001511;*/
+	background-color: #002128;
+}
+/* position les element de la balise nav */
+nav{
+	position: fixed;
+	background-color: #1b1b1b;
+	width: 100%;
+	padding: 10px;
+	z-index: 12;
+}
+/* position du menu a droit de l'ecran separe  */
+nav .menu{
+	margin: auto;
+	max-width: 1250px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 20px;
+}
+
+/* position du logo maintenant  */
+nav .menu .logo a {
+	text-decoration: none;/*enlever le soulignement*/
+	color: white;
+	font-size: 40px;
+	font-weight: bold;
+	/*background: url(img17.png);*/
+}
+
+/* position du menu sur la liste ul */
+.menu ul{
+	display: inline-flex;
+	list-style: none;/*enlever les point*/
+}
+
+/* position du menu precisement au li */
+.menu ul li{
+	margin-left: 7px;/* ajouter des espaces */
+}
+
+
+/*s'attaquer au 1er element li */
+.menu ul li:first-child{
+	margin-left: 0;
+
+}
+
+
+/* au element des li la couleur.... */
+.menu ul li a{
+	text-decoration: none;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 500;
+	padding: 8px 15px;
+	border-radius: 5px;
+	transition: all 0.3s ease;
+}
+
+/* apprution du couleur quand la souris pass sur l'element */
+.menu ul li a:hover{
+	background-color: #fff;
+	color: black;
+}
+
+/*ajout de l'image en fond ecran acueil*/
+.img {
+	background: url('img22.jpg') no-repeat;
+	width: 100%;
+	height: 100vh;
+	padding-right: 50px;
+	margin-right: 0px; 
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	animation: changebackground 10s infinite;
+}
+
+/*assomblir impeu*/
+.img::before{
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+
+/* le contenu de la page */
+			.center{
+				position: absolute;
+				top: 52%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 100%;
+				padding: 0 20px;
+				text-align: center;
+			}
+
+			.center .title {
+				color: #fff;
+				font-size: 50px;
+				font-weight: 200;
+			}
+			.center .sub_title {
+				color: #fff;
+				font-size: 25px;
+				font-weight: 200;
+			}
+			.center .btns {
+				margin-top: 20px;
+			}
+			.center .btns button{
+				height: 55px;
+				width: 170px;
+				border-radius: 5px;
+				border: none;
+				margin: 0 10px;
+				border: 2px solid #fff;
+				font-size: 15px;
+				font-weight: 600;
+				padding: 0 10px;
+				cursor: pointer;
+				outline: none;
+				transition: all 0.3s ease;
+			}
+			.center .btns button{
+				color: #fff;
+				background: none;
+			}
+			.center .btns button:hover{
+				color: #000;
+				background: #fff;
+			}
+/* creer une animation je dois chois le css de l'image 
+appliquer l'animation lui donner un nom, la durer, et la sequence 
+et apres cerer ctte animation avec @keyfram */
+
+@keyframes changebackground{
+	0%{
+		background-image: url(img22.jpg);
+	}
+	33.33%{
+		background-image: url(img21.jpg);
+	}
+	66.66%{
+		background-image: url(img20.jpg);
+	}
+	100%{
+		background-image: url(img19.jpg);
+	}
+}
+
+   /* partie 2 */
+
+
+
+/* Style pour le conteneur de l'image */
+.Accueil .title1{
+	text-align: center;
+	color: white;
+}
+
+
+   /* partie 3 */
+
+   .parcours{
+	color: white;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	height: 55%;
+}
+.parcoursgauche {
+	width: 60%;
+	margin-right: 1Opx;
+	border-radius: 20px;
+}
+
+
+   /* partie 4 */
+
+/* Debut section 2 etude */
+
+.etudes{
+	background-image: url(img8.avif);
+	width: 90%;
+	height: 90%;
+	background-size: cover;
+	margin-left: 60px;
+	
+
+	padding-bottom: 6%; /* va crer un espace en dessous du dernier bloc blanc */
+}
+.titleetudes
+{
+	text-align: center;
+	color: white;
+}
+.titleetudes{
+	text-align: center;
+	font-size: 30px;
+}
+.etudes h1{
+	text-align: center;
+}
+.etudesecoles{
+	margin-left: 23%;/* d'ecarter les 3 bloc vers la droite */
+}
+.ecoles{
+	width: 70%;
+	height: 20%;
+	background-color: none;
+	align-items: center;
+	color: white;
+}
+.ecoles img{
+	margin-left: 43%;
+	width: 15%;
+	height: 20%;
+}
+/* fin section 2 etude */
+
+
+   /* partie 5 */
+
+
+
+
+
+/* Debut section 3 experience */
+
+.experiences{
+	background-image: url(img11.avif);
+	width: 90%;
+	height: 90%;
+	background-size: cover;
+	margin-left: 60px;
+	padding-bottom: 6%;
+
+
+}
+.experiences::before{
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	
+}
+
+
+.titleexperiences{
+	text-align: center;
+	color: white;
+}
+.experiences h1{
+	text-align: center;
+}
+
+.expcadre{
+	margin-top: 0%;
+	margin-left: 23%;
+}
+.experiencesformation{
+	width: 70%;
+	height: 20%;
+	background-color: none;
+	align-items: center;
+	color: white;
+}
+.experiencesformation img{
+	margin-left: 43%;
+	width: 10%;
+	height: 20%;
+}
+ /*fin section 3 etude */
+
+
+
+
+
+
+   /* partie 6 */
+
+
+
+/* de but contat */
+
+.contact{
+	color: white;
+}
+.mail:hover{
+	color: lightblue;
+	font-weight: bold;
+}
+
+
+/*  Fin */
